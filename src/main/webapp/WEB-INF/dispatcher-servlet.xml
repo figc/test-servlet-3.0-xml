@@ -16,13 +16,6 @@
     <!-- Spring will register some beans to handle content, resolvers etc... -->
     <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager" />
     
-	<!-- mvc:annotation-driven>
-      <mvc:message-converters>
-	    <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
-	    <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
-	  </mvc:message-converters>
-	</mvc:annotation-driven-->
-    
     <!-- Tell Spring to scan for Controllers under the given package -->
 	<context:component-scan base-package="test.web">
 	    <context:include-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
@@ -49,4 +42,3 @@
 	    </property>
 	</bean>   
 </beans>
-
